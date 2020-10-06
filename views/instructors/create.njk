@@ -1,0 +1,35 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <form class="card" method="POST" action="/instructors">
+        <section class="avatar" style="background:url(https://source.unsplash.com/collection/3465564/900x900) no-repeat center center / cover"></section>
+        <section class="details">
+            <h3>Details</h3>
+            <div class="item">
+                <div>Avatar URL</div>
+                <div>
+                    <input type="url" name="avatar_url">
+                </div>
+            </div>
+            <div class="item">
+                <div>Sexo</div>
+                <div>Male</div>
+            </div>
+            <div class="item">
+                <div>Age</div>
+                <div>30</div>
+            </div>
+            <div class="item">
+                <div>side dish</div>
+                <div>
+                    <span>weight training</span>
+                    <span>cross-fit</span>
+                </div>
+            </div>
+            <div class="item">
+                <div>since</div>
+                <div>20/03/2017</div>
+            </div>
+        </section>
+    </form>
+{% endblock content %}
