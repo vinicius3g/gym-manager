@@ -4,19 +4,19 @@ const routes = express.Router()
 
 
 routes.get('/', function(req,res) {
-    res.redirect('/instructors')
+    return res.redirect('/instructors')
 })
 routes.get('/instructors', function(req,res) {
-    res.render('instructors/index')
-})
-routes.get('/members', function(req,res) {
-    res.render('members')
+    return res.render('instructors/index')
 })
 routes.get('/instructors/create', function(req,res) {
-    res.render('instructors/create')
+    return res.render('instructors/create')
+})
+routes.get('/members', function(req,res) {
+    return res.render('members')
 })
 routes.post('/instructors', function(req,res) {
-    res.send('go')
+    return res.send(req.body)
 })
 
 module.exports = routes

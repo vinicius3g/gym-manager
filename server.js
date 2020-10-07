@@ -7,6 +7,7 @@ const server = express()
 
 server.use(express.static('public'))
 server.use(routes)
+server.use(express.urlencoded({ extended: true }))
 
 
 server.set("view engine", "njk")
